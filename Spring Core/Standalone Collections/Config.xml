@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd 
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util 
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<util:list list-class="java.util.Vector" id="myfndz">
+		<value> Swapnali </value>
+		<value> Raj </value>
+		<value> Dhanashree </value>
+		<value> Aabha </value>
+		<value> Harsh </value>
+	</util:list>
+
+	<util:map map-class="java.util.HashMap" id="mydost">
+		<entry key="Academics" value="50000" />
+		<entry key="Sports" value="4000" />
+		<entry key="Deposit" value="8000" />
+		<entry key="Other" value="2000" />
+	</util:map>
+	
+	<util:properties id="myprop">
+		<prop key="Maths">30</prop>
+		<prop key="English">80</prop>
+		<prop key="Science">60</prop>
+		<prop key="Biology">50</prop>
+	</util:properties>
+
+	<bean class="com.springcore.standalone.collection.Person"
+		name="p1">
+		<property name="Friends">
+			<ref bean="myfndz" />
+		</property>
+		<property name="Fees">
+			<ref bean="mydost" />
+		</property>
+		<property name="property1">
+			<ref bean="myprop" />
+		</property>
+	</bean>
+
+</beans>                         
