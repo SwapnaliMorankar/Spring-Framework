@@ -1,1 +1,7 @@
+There are two ways of transfering data from controller to view. 
 
+1. The Model Class method
+2. The ModelAndView Class method
+
+The model class method uses addAttribute() method to get the names of attributes that we have to transfer to view.
+The ModelAndView Class method uses addObject() method to add the names of attributes that we have to transfer to view.
